@@ -1,0 +1,98 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.42.0.0
+Copyright (C) 2025 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: antonyj hp, HP Inc., LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.42.0.0
+Toolchain Path:  C:\Users\hp\AppData\Local\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.23
+Assembler:       Armasm.exe V6.23
+Linker/Locator:  ArmLink.exe V6.23
+Library Manager: ArmAr.exe V6.23
+Hex Converter:   FromElf.exe V6.23
+CPU DLL:         SARMCM3.DLL V5.42.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      UL2CM3.DLL V1.164.14.0
+Dialog DLL:      TCM.DLL V1.56.6.0
+ 
+<h2>Project:</h2>
+C:\Users\hp\OneDrive\Desktop\fun projects\embedded_programming\led_class_additonal\led_proj.uvprojx
+Project File Date:  04/27/2025
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.23', folder: 'C:\Users\hp\AppData\Local\Keil_v5\ARM\ARMCLANG\Bin'
+Build target 'stm32f411vet'
+medical_led.c(2): warning: unused parameter 'obj' [-Wunused-parameter]
+    2 | void medical_led_diagnostic(medical_led const* const obj)
+      |                                                      ^
+medical_led.c(6): warning: unused parameter 'obj' [-Wunused-parameter]
+    6 | uint32_t medical_led_effeciency(medical_led const* const obj)
+      |                                                          ^
+2 warnings generated.
+compiling medical_led.c...
+compiling system_stm32f4xx.c...
+compiling uart.c...
+compiling main.c...
+../led_class/powerled.c(2): warning: unused parameter 'obj' [-Wunused-parameter]
+    2 | void PowerLed_diagnostics(PowerLed_Type const*const obj)
+      |                                                     ^
+../led_class/powerled.c(4): warning: unused parameter 'obj' [-Wunused-parameter]
+    4 | uint32_t PowerLed_effeciency(PowerLed_Type const*const obj)
+      |                                                        ^
+../led_class/powerled.c(15): error: variable has incomplete type 'const struct LedVtable'
+   15 |         static const struct LedVtable vtable={
+      |                                       ^
+../led_class/powerled.c(15): note: forward declaration of 'struct LedVtable'
+   15 |         static const struct LedVtable vtable={
+      |                             ^
+../led_class/powerled.c(23): error: no member named 'virt' in 'Led'
+   23 |         pled_obj->super.virt=&vtable;
+      |         ~~~~~~~~~~~~~~~ ^
+2 warnings and 2 errors generated.
+compiling powerled.c...
+led.c(3): warning: unused parameter 'obj' [-Wunused-parameter]
+    3 | static void run_diagnostics(Led const * const obj)
+      |                                               ^
+1 warning generated.
+compiling led.c...
+assembling startup_stm32f411xe.s...
+".\Objects\led_proj.axf" - 2 Error(s), 5 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                https://www.keil.com/pack/ARM.CMSIS.6.1.0.pack
+                ARM::CMSIS@6.1.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 6.1.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F4xx_DFP.2.4.0.pack
+                Keil::STM32F4xx_DFP@2.4.0
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 2.1.0
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/_stm32f411vet
+  C:/Users/hp/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include
+  C:/Users/hp/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.4.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE@6.1.0
+
+   * Component: Keil::Device:Startup@2.1.0
+      Source file:   MDK/Device/Source/ARM/STM32F4xx_OTP.s
+      Include file:  Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
+      Source file:   Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/arm/startup_stm32f411xe.s
+      Source file:   MDK/Device/Source/ARM/system_stm32f4xx.c
+Target not created.
+Build Time Elapsed:  00:00:02
+</pre>
+</body>
+</html>
